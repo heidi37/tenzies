@@ -1,0 +1,13 @@
+.die {
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px 0px #00000026;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  transition: .2s ease-in background-color;
+}
+
+.die:hover {
+  background-color: #59E391;
+}
