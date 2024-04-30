@@ -1,7 +1,7 @@
 import './Die.css'
 
-export default function Die() {
+export default function Die(props) {
   return (
-    <div className="die"><h2>1</h2></div>
+    <div onClick={props.holdDice} className={props.isHeld ? "die held" : "die"}><h2>{props.value}</h2></div>
   )
 }

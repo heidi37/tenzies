@@ -10,4 +10,9 @@
 
 .die:hover {
   background-color: #59E391;
+  cursor: pointer;
+}
+
+.die.held {
+  background-color: #59E391;
 }
