@@ -6,6 +6,7 @@
   align-items: center;
   background-color: #fff;
   transition: .2s ease-in background-color;
+  position: relative;
 }
 
 .die:hover {
@@ -15,4 +16,81 @@
 
 .die.held {
   background-color: #59E391;
+}
+
+.top-left::after{
+  content:"";
+  top: 5px;
+  left: 5px;
+  width: 7px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.top-middle::after{
+  content:"";
+  top: 5px;
+  left: 15px;
+  width: 7px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.top-right::after{
+  content:"";
+  top: 5px;
+  left: 25px;
+  width: 7px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.middle-middle::after{
+  content:"";
+  top: 15px;
+  left: 15px;
+  width: 7px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.bottom-left::after{
+  content:"";
+  top: 25px;
+  left: 5px;
+  width: 7px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.bottom-middle::after{
+  content:"";
+  top: 25px;
+  left: 15px;
+  width: 7px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.bottom-right::after{
+  content:"";
+  top: 25px;
+  left: 25px;
+  width: 7px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
 }
