@@ -1,7 +1,7 @@
 main {
   width: 360px;
   height: 379px;
-  background: #0b2434;
+  background: #847a89;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,7 @@ main {
   padding: 15px 34.56px 33.92px 34.56px;
   border-radius: 10px;
   background: #F5F5F5;
+  border: 1px solid #55555533;
 }
 
 .dice-container {
@@ -36,7 +37,7 @@ h1, h2 {
 h1 {
   font-size: 26px;
   margin: 0;
-  color: #5035FF;
+  color: #282183;
 }
 
 h2 {
