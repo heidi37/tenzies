@@ -7,6 +7,9 @@ import Die from "./Die"
 function App() {
   const [dice, setDice] = useState(getDice())
   const [tenzies, setTenzies] = useState(false)
+  const [rolls, setRolls] = useState(0)
+  const [lowScore, setLowScore] = useState(parseInt(localStorage.getItem('lowScore'), 10) || 1001);
+
 
   useEffect(
     function () {
@@ -43,9 +46,15 @@ function App() {
           return die.isHeld ? die : generateNewDie()
         })
       )
+      setRolls(prevRolls => prevRolls + 1)
     } else {
+      if (rolls < lowScore){
+        localStorage.setItem('lowScore', rolls)
+        setLowScore(rolls)
+      }
       setDice(getDice())
       setTenzies(false)
+      setRolls(0)
     }
   }
 
@@ -71,6 +80,7 @@ function App() {
   return (
     <>
       <main>
+
         {tenzies && <Confetti />}
         <div className="inner-main">
           <h1>Tenzies</h1>
@@ -78,10 +88,13 @@ function App() {
             Roll until all dice are the same. Click each die to freeze it at its
             current value between rolls.
           </p>
+          <h3>Rolls: {rolls}</h3>
           <div className="dice-container">{diceElements}</div>
           <button onClick={rollDice}>{tenzies ? "New Game" : "Roll"}</button>
+          <p><strong>Score to Beat:</strong> <span className="low-score">{lowScore}</span> (lower is better)</p>
         </div>
       </main>
+
     </>
   )
 }
