@@ -9,10 +9,7 @@
       property="og:description"
       content="A dice game. Single page React application that keeps track of your best score in local storage"
     />
-    <meta
-      property="og:image"
-      content="/screenshot.png"
-    />
+    <meta property="og:image" content="/screenshot.png" />
     <meta
       property="og:url"
       content="https://tenzies-app-scrimba.netlify.app/"
@@ -20,16 +17,30 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Heidi Fryzell" />
+    <link
+      rel="stylesheet"
+      id="font-awesome-css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css?ver=6.5.1"
+      type="text/css"
+      media="all"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:,wght@0500;&display=swapdisplay=swap"
       rel="stylesheet"
     />
     <title>Tenzies</title>
   </head>
   <body>
     <div id="root"></div>
+    <footer>
+      <p>
+        <a href="https://heidifryzell.com"><i class="fa-solid fa-terminal"></i></a>
+        <a href="https://heidifryzell.com">heidifryzell.com</a> &copy;<span id="copyrightYear"></span>
+      </p>
+    </footer>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="/src/copyright.js"></script>
   </body>
 </html>

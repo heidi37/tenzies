@@ -7,6 +7,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 100px;
 }
 
 .inner-main {
@@ -83,4 +84,38 @@ button:hover {
 
 button:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+
+footer {
+  width: 100%;
+  padding: 0.5rem 0;
+  background: #404ea00f;
+  font-family: Roboto, sans-serif;
+}
+
+footer p, footer small {
+  text-align: center;
+}
+
+footer a {
+  color: #39457b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer .fa-terminal{
+  animation: terminal-animate 1.5s infinite;
+}
+
+@keyframes terminal-animate {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
